@@ -9,7 +9,7 @@ class ShoppingCart extends Component {
         let shoppingCartDisplay = this.props.shoppingCart.map((element, index) => {
             return (
                 <div className="shopping-cart-product-container" key={index}>
-                    <img src={element.image} alt="" />
+                    <img src={element.image} alt="yolo" />
                     <div className="shopping-cart-info">
                         <h2>{element.title}</h2>
                         <h2>{"$" + element.price + ".00"}</h2>
@@ -37,4 +37,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(ShoppingCart);
+export default connect(mapStateToProps, {removeFromShoppingCart})(ShoppingCart);
